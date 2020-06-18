@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/fonts">
+        <file>ecran_monochrome.ttf</file>
+        <file>led_calculator.ttf</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="bigX">resources/images/bigX.png</file>
+        <file alias="smallX">resources/images/smallX.png</file>
+        <file alias="error">resources/images/error-5-256.png</file>
+        <file alias="warning">resources/images/error-6-256.png</file>
+    </qresource>
+</RCC>

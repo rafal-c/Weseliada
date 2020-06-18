@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources.qrc</file>
+        <file>qml/AnswerDelegate.qml</file>
+        <file>qml/GamePanel.qml</file>
+        <file>qml/GamePanelForm.ui.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/QuestionDelegate.qml</file>
+        <file>qml/Scoreboard.qml</file>
+        <file>qml/ScoreboardForm.ui.qml</file>
+        <file>qml/SidebarControlPanel.qml</file>
+        <file>qml/TextField.qml</file>
+        <file>qml/TextFieldForm.ui.qml</file>
+    </qresource>
+</RCC>
