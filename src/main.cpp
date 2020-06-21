@@ -4,6 +4,7 @@
 
 #include "sidebarmodel.h"
 #include "answerareamodel.h"
+#include "questionlistmodel.h"
 
 int main(int argc, char* argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -22,7 +23,10 @@ int main(int argc, char* argv[]) {
     SidebarModel rightSidebarModel;
     root_context->setContextProperty("rightSidebarModelCpp", &rightSidebarModel);
 
-    const QUrl mainUrl(QStringLiteral("qrc:/main.qml"));
+    QuestionListModel questionListModel;
+    root_context->setContextProperty("questionListModelCpp", &questionListModel);
+
+    const QUrl mainUrl(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(
         &engine, &QQmlApplicationEngine::objectCreated, &app, [mainUrl](QObject* obj, const QUrl& objUrl) {
             if (!obj && mainUrl == objUrl)
@@ -30,6 +34,9 @@ int main(int argc, char* argv[]) {
         },
         Qt::QueuedConnection);
     engine.load(mainUrl);
+
+    questionListModel.readQuestionsFromFile(QStringLiteral(":/data/questions.json"));
+    qDebug() << "Loaded questions count: " << questionListModel.rowCount();
 
     return app.exec();
 }

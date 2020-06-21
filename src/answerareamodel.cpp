@@ -4,23 +4,38 @@ void AnswerAreaModel::prepareForQuestion(int answerCount)
 {
     clear();
     m_answerCount = answerCount;
-    for (int i = 1; i <= answerCount; ++i) {
+    for (int i = 0; i < answerCount; ++i) {
         printAnswerPlaceholder(i);
-        printSum(0);
-
     }
+    m_sum = 0;
+    printSum();
 }
 
-void AnswerAreaModel::printSum(int sum) {
+void AnswerAreaModel::printSum() {
     int row = topRowOffset() + m_answerCount + 1;
     int column = columnCount() - 1 - 3 /* sum digits */ - 1 - s_sumKeyword.length();
-    QString sumText = s_sumKeyword + " "+ QString::number(sum).rightJustified(3) + " ";
+    QString sumText = s_sumKeyword + " "+ QString::number(m_sum).rightJustified(3) + " ";
     display(sumText, row, column);
+}
+
+void AnswerAreaModel::printAnswer(int answerNo, QString answerText, int answerPoints)
+{
+    answerText.resize(m_maxAnswerLength, ' ');
+    QString text = " " + QString::number(answerNo + 1) + " " + answerText + " " + QString::number(answerPoints).rightJustified(2) + " ";
+    display(text, topRowOffset() + answerNo, 0);
+    m_sum += answerPoints;
+    printSum();
+}
+
+void AnswerAreaModel::clearAnswer(int answerNo, int answerPoints)
+{
+    printAnswerPlaceholder(answerNo);
+    m_sum -= answerPoints;
+    printSum();
 }
 
 void AnswerAreaModel::printAnswerPlaceholder(int answerNo)
 {
-    int ellipsisLength = columnCount() - (4 /* spaces */ + 1 /* digit */ + s_scorePlaceholder.length());
-    QString placeholderText = " " + QString::number(answerNo) + " " + QString(ellipsisLength, s_ellipsis) + " " + s_scorePlaceholder + " ";
-    display(placeholderText, topRowOffset() + answerNo - 1, 0);
+    QString placeholderText = " " + QString::number(answerNo + 1) + " " + QString(m_maxAnswerLength, s_ellipsis) + " " + s_scorePlaceholder + " ";
+    display(placeholderText, topRowOffset() + answerNo, 0);
 }

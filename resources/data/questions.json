@@ -1,0 +1,154 @@
+{
+	"questions": [
+		{
+			"text": "Skąd przyjechali goście weselni?",
+			"answers": [
+				{
+					"text": "Lublin",
+					"points": 37
+				},
+				{
+					"text": "Warszawa",
+					"points": 37
+				},
+				{
+					"text": "Zamość",
+					"points": 37
+				},
+				{
+					"text": "Gniezno",
+					"points": 37
+				},
+				{
+					"text": "Dortmund",
+					"points": 37
+				},
+				{
+					"text": "Londyn",
+					"points": 37
+				}
+			]
+		},
+		{
+			"text": "Co robią goście na weselu?",
+			"answers": [
+				{
+					"text": "tańczą",
+					"points": 37
+				},
+				{
+					"text": "piją",
+					"points": 37
+				},
+				{
+					"text": "śpiewają",
+					"points": 37
+				},
+				{
+					"text": "jedzą",
+					"points": 37
+				},
+				{
+					"text": "rozmawiają",
+					"points": 37
+				},
+				{
+					"text": "świetnie się bawią",
+					"points": 37
+				}
+			]
+		},
+		{
+			"text": "Smak nalewki, który przygotowali państwo młodzi.",
+			"answers": [
+				{
+					"text": "wiśniówka",
+					"points": 37
+				},
+				{
+					"text": "czerwona porzeczka",
+					"points": 37
+				},
+				{
+					"text": "pigwówka",
+					"points": 37
+				},
+				{
+					"text": "malinówka",
+					"points": 37
+				}
+			]
+		},
+		{
+			"text": "Czego nie robi idealny mężczyzna?",
+			"answers": [
+				{
+					"text": "nie istnieje",
+					"points": 37
+				},
+				{
+					"text": "nie pije",
+					"points": 37
+				},
+				{
+					"text": "nie pali",
+					"points": 37
+				},
+				{
+					"text": "nie sprzecza się",
+					"points": 37
+				},
+				{
+					"text": "nie zdradza",
+					"points": 37
+				}
+			]
+		},
+		{
+			"text": "Jak reaguje mąż na \"Kochanie, nie mam się w co ubrać!\"?",
+			"answers": [
+				{
+					"text": "To chodź goła, mi to nie przeszkadza.",
+					"points": 37
+				},
+				{
+					"text": "A szafa się nie domyka.",
+					"points": 37
+				},
+				{
+					"text": "Czyli jak zawsze.",
+					"points": 37
+				},
+				{
+					"text": "Zaraz ci coś znajdę.",
+					"points": 37
+				},
+				{
+					"text": "Musimy jechać na zakupy.",
+					"points": 37
+				}
+			]
+		},
+		{
+			"text": "Synonim słowa \"żona\"",
+			"answers": [
+				{
+					"text": "małżonka",
+					"points": 37
+				},
+				{
+					"text": "ukochana",
+					"points": 37
+				},
+				{
+					"text": "druga połówka",
+					"points": 37
+				},
+				{
+					"text": "stara",
+					"points": 37
+				}
+			]
+		}
+	]
+}

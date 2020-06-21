@@ -63,12 +63,6 @@ ForEachMacros:
   - BOOST_FOREACH
 IncludeBlocks:   Regroup
 IncludeCategories:
-  - Regex:           '^(<|")(mathlink|wstp)\.h'
-    Priority:        3
-  - Regex:           '^(<|")Wolfram.*'
-    Priority:        4
-  - Regex:           '^(<|")LLU/.*'
-    Priority:        5
   - Regex:           '^<ext/.*\.h>'
     Priority:        2
   - Regex:           '^<.*\.h>'

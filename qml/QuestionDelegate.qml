@@ -5,42 +5,34 @@ import QtQuick.Controls 2.12
 ColumnLayout {
     id: delegateID
     implicitWidth: delegateID.ListView.view.width
-    property var questionModel
-    property var activeQuestion
+
+    property bool isActiveQuestion: (questionListModelCpp.activeQuestion === model.index)
     spacing: 8
     //anchors.fill: parent
     Rectangle {
         id: rectangle
         Layout.fillWidth: true
-        implicitHeight: 20
+        implicitHeight: questionTextID.implicitHeight + 10
         Button {
             id: questionTextID
-            text: qsTr(questionModel.question)
+            text: qsTr(question)
             anchors.fill: parent
             onClicked: {
-                console.log(questionModel.answers.count)
-                answerAreaModelCpp.prepareForQuestion(6);
-                console.log(answerAreaModelCpp.tileSpacing)
+                console.log("Now solving " + model.index + ". " + model.question + " with " + model.answers.rowCount() + " answers.")
+                questionListModelCpp.activeQuestion = model.index;
+                console.log("Active question is " + questionListModelCpp.activeQuestion)
+                answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
+
             }
         }
     }
     ListView {
-        //Layout.fillHeight: true
         Layout.fillWidth: true
         implicitHeight: contentHeight
         spacing: 10
-        model: ListModel {
-            ListElement {
-                text: "lama"
-                points: 10
-            }
-            ListElement {
-                text: "koza"
-                points: 20
-            }
-        }
+        model: answers
         delegate: AnswerDelegate {
-            answerModel: model
+            enabled: isActiveQuestion
         }
     }
 

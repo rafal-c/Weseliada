@@ -9,4 +9,7 @@
         <file alias="error">resources/images/error-5-256.png</file>
         <file alias="warning">resources/images/error-6-256.png</file>
     </qresource>
+    <qresource prefix="/data">
+        <file alias="questions.json">resources/data/questions.json</file>
+    </qresource>
 </RCC>

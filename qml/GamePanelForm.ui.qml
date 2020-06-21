@@ -4,6 +4,7 @@ import QtQuick.Controls 2.12
 
 Item {
     id: gamePanelID
+    property alias questionsListID: questionsListID
     implicitHeight: 50
     Rectangle {
         id: rectangle
@@ -12,7 +13,7 @@ Item {
     }
 
     RowLayout {
-        id: row
+        id: rowID
         anchors.fill: parent
 
         SidebarControlPanel {
@@ -28,67 +29,9 @@ Item {
             Layout.fillHeight: true
             Layout.fillWidth: true
             implicitWidth: 60
-            implicitHeight: contentHeight
-            delegate: QuestionDelegate {
-                id: col1
-                questionModel: model
-            }
-            model: ListModel {
-                ListElement {
-                    question: "Więcej niż jedno zwierzę"
-                    answers: [
-                        ListElement {
-                            text: "lama"
-                            points: 10
-                        },
-                        ListElement {
-                            text: "koza"
-                            points: 20
-                        }
-                    ]
-                }
-
-                ListElement {
-                    question: "Więcej niż jedno zwierzę"
-                    answers: [
-                        ListElement {
-                            text: "lama"
-                            points: 10
-                        },
-                        ListElement {
-                            text: "koza"
-                            points: 20
-                        }
-                    ]
-                }
-                ListElement {
-                    question: "Więcej niż jedno zwierzę"
-                    answers: [
-                        ListElement {
-                            text: "lama"
-                            points: 10
-                        },
-                        ListElement {
-                            text: "koza"
-                            points: 20
-                        }
-                    ]
-                }
-
-                ListElement {
-                    question: "Więcej niż jedno zwierzę"
-                    answers: [
-                        ListElement {
-                            text: "lama"
-                            points: 10
-                        },
-                        ListElement {
-                            text: "koza"
-                            points: 20
-                        }
-                    ]
-                }
-            }
+            implicitHeight: 80
+            model: questionListModelCpp
+            delegate: QuestionDelegate {}
         }
 
         SidebarControlPanel {

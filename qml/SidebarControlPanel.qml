@@ -25,7 +25,7 @@ Item {
             Layout.margins: 10
             Layout.fillHeight: true
             Layout.fillWidth: true
-            source: "images/warning"
+            source: "qrc:/images/warning"
 
             MouseArea {
                 anchors.fill: parent
@@ -46,7 +46,7 @@ Item {
             fillMode: Image.PreserveAspectFit
             //anchors.centerIn: parent
             //height: sourceSize.height/2.5
-            source: "images/error"
+            source: "qrc:/images/error"
 
             MouseArea {
                 anchors.fill: parent
