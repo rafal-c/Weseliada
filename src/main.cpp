@@ -1,3 +1,4 @@
+#include <QFontDatabase>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -37,6 +38,10 @@ int main(int argc, char* argv[]) {
 
     questionListModel.readQuestionsFromFile(QStringLiteral(":/data/questions.json"));
     qDebug() << "Loaded questions count: " << questionListModel.rowCount();
+
+
+    QFontDatabase::addApplicationFont(":/fonts/ecran_monochrome.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/led_calculator.ttf");
 
     return app.exec();
 }

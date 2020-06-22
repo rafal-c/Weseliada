@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/fonts">
-        <file>ecran_monochrome.ttf</file>
-        <file>led_calculator.ttf</file>
+        <file alias="ecran_monochrome.ttf">resources/fonts/ecran_monochrome.ttf</file>
+        <file alias="led_calculator.ttf">resources/fonts/led_calculator.ttf</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="bigX">resources/images/bigX.png</file>
