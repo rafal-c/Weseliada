@@ -5,11 +5,6 @@ AnswerListModel::AnswerListModel(QObject *parent)
 {
 }
 
-QVariant AnswerListModel::headerData(int section, Qt::Orientation orientation, int role) const
-{
-    // FIXME: Implement me!
-}
-
 int AnswerListModel::rowCount(const QModelIndex &parent) const
 {
     // For list models only the root node (an invalid parent) should return the list's size. For all
@@ -20,7 +15,7 @@ int AnswerListModel::rowCount(const QModelIndex &parent) const
     return answers.size();
 }
 
-QVariant AnswerListModel::data(const QModelIndex &index, [[maybe_unused]] int role) const
+QVariant AnswerListModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
@@ -31,5 +26,19 @@ QVariant AnswerListModel::data(const QModelIndex &index, [[maybe_unused]] int ro
     if (role == PointsRole) {
         return a.points;
     }
+    if (role == EnabledRole) {
+        return activeQ();
+    }
     return {};
+}
+
+
+bool AnswerListModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid() || role != GuessedRole)
+        return false;
+    auto& a = answers.at(index.row());
+    a.guessed = value.toBool();
+    emit dataChanged(index, index, {role});
+    return true;
 }

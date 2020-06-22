@@ -25,20 +25,15 @@ QtObject {
 
         Scoreboard {
             id: myScoreID
-//            height: rowLayoutID.contentHeight
-//            width: rowLayoutID.contentWidth
             anchors.fill: parent
-            mainAreaModel: answerAreaModelCpp
-            leftSidebarModel: leftSidebarModelCpp
-            rightSidebarModel: rightSidebarModelCpp
         }
     }
 
     property var testWindow: ApplicationWindow {
         id: panelWindowID
         visible: true
-        width: 640
-        height: 480
+        width: 1080
+        height: 720
 //        minimumWidth: gamePanelID.implicitWidth
 //        minimumHeight: gamePanelID.height
 

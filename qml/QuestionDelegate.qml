@@ -4,9 +4,9 @@ import QtQuick.Controls 2.12
 
 ColumnLayout {
     id: delegateID
-    implicitWidth: delegateID.ListView.view.width
+    width: delegateID.ListView.view.width
 
-    property bool isActiveQuestion: (questionListModelCpp.activeQuestion === model.index)
+    property int questionIndex: model.index
     spacing: 8
     //anchors.fill: parent
     Rectangle {
@@ -22,20 +22,19 @@ ColumnLayout {
                 questionListModelCpp.activeQuestion = model.index;
                 console.log("Active question is " + questionListModelCpp.activeQuestion)
                 answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
-
             }
         }
     }
     ListView {
+        id: answersViewID
+        Layout.fillHeight: true
         Layout.fillWidth: true
         implicitHeight: contentHeight
-        spacing: 10
         model: answers
         delegate: AnswerDelegate {
-            enabled: isActiveQuestion
+            parentIndex: questionIndex
         }
     }
-
 }
 
 

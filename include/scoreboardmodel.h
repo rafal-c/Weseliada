@@ -12,7 +12,7 @@ class ScoreboardModel : public QAbstractTableModel
 
 public:
     enum Roles {
-        TextRole
+        TextRole = Qt::UserRole + 1,
     };
     Q_ENUM(Roles)
 

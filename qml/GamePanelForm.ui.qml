@@ -19,7 +19,7 @@ Item {
         SidebarControlPanel {
             id: leftSidebarPanelID
             sidebarModel: leftSidebarModelCpp
-            implicitWidth: 20
+            implicitWidth: 15
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
@@ -28,8 +28,7 @@ Item {
             id: questionsListID
             Layout.fillHeight: true
             Layout.fillWidth: true
-            implicitWidth: 60
-            implicitHeight: 80
+            implicitWidth: 70
             model: questionListModelCpp
             delegate: QuestionDelegate {}
         }
@@ -37,7 +36,7 @@ Item {
         SidebarControlPanel {
             id: rightSidebarPanelID
             sidebarModel: rightSidebarModelCpp
-            implicitWidth: 20
+            implicitWidth: 15
             Layout.fillHeight: true
             Layout.fillWidth: true
         }

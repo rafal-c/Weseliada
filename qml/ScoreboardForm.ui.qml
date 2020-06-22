@@ -11,6 +11,7 @@ Item {
     property alias rightSidebarModel: rightSidebarID.model
     property alias rowLayoutID: rowLayoutID
 
+    property int defaultSpacing: 10
     enabled: false
 
     Rectangle {
@@ -21,15 +22,15 @@ Item {
 
     RowLayout {
         id: rowLayoutID
-        spacing: mainAreaModel.tileSpacing
+        spacing: mainAreaModel ? mainAreaModel.tileSpacing : defaultSpacing
         anchors.fill: parent
 
         TableView {
             id: leftSidebarID
             implicitWidth: contentWidth
             implicitHeight: contentHeight
-            columnSpacing: model.tileSpacing
-            rowSpacing: model.tileSpacing
+            columnSpacing: model ? model.tileSpacing : defaultSpacing
+            rowSpacing: model ? model.tileSpacing : defaultSpacing
             delegate: TextField {
                 text: model.text
             }
@@ -42,11 +43,11 @@ Item {
             id: mainAreaID
             implicitWidth: contentWidth
             Layout.fillHeight: true
-            columnSpacing: model.tileSpacing
-            rowSpacing: model.tileSpacing
+            columnSpacing: model ? model.tileSpacing : defaultSpacing
+            rowSpacing: model ? model.tileSpacing : defaultSpacing
             delegate: TextField {
                 text: model.text
-                fontFamily: "LEDCalculator"
+                fontFamily: "LED Calculator"
             }
         }
 
@@ -54,8 +55,8 @@ Item {
             id: rightSidebarID
             implicitWidth: contentWidth
             Layout.fillHeight: true
-            columnSpacing: model.tileSpacing
-            rowSpacing: model.tileSpacing
+            columnSpacing: model ? model.tileSpacing : defaultSpacing
+            rowSpacing: model ? model.tileSpacing : defaultSpacing
             delegate: TextField {
                 text: model.text
             }

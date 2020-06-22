@@ -42,6 +42,7 @@ QVariant QuestionListModel::data(const QModelIndex &index, int role) const
 
 void QuestionListModel::readQuestionsFromFile(QString filePath)
 {
+    emit layoutAboutToBeChanged();
     QFile file {filePath};
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
         qDebug() << "Could not open config file " << filePath;
@@ -73,5 +74,4 @@ void QuestionListModel::readQuestionsFromFile(QString filePath)
         m_questions.emplace_back(q["text"].toString(), std::move(ansModel));
     }
     emit layoutChanged();
-    emit dataChanged(index(0), index(rowCount() - 1));
 }

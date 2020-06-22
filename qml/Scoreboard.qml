@@ -2,6 +2,10 @@ import QtQuick 2.4
 
 ScoreboardForm {
     id: scoreboardID
+    mainAreaModel: answerAreaModelCpp
+    leftSidebarModel: leftSidebarModelCpp
+    rightSidebarModel: rightSidebarModelCpp
+
 }
 
 /*##^##
