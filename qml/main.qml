@@ -7,26 +7,33 @@ QtObject {
     property var controlWindow: Window {
         id: scoreboardWindowID
         visible: false
-        minimumWidth: myScoreID.rowLayoutID.childrenRect.width
-        minimumHeight: myScoreID.rowLayoutID.childrenRect.height
+        minimumWidth: gameBoardID.implicitWidth
+        minimumHeight: gameBoardID.implicitHeight
         //maximumHeight: minimumHeight
         //maximumWidth: minimumWidth
     //    flags: Qt.FramelessWindowHint
         title: qsTr("Tablica wyników")
 
 
-        MouseArea {
+//        MouseArea {
+//            anchors.fill: parent
+//            onClicked: {
+//                console.debug(width)
+//               // console.debug(myScoreID.rowLayoutID.childrenRect.width)
+//            }
+//        }
+
+        GameBoard {
+            id: gameBoardID
             anchors.fill: parent
-            onClicked: {
-                console.debug(width)
-                console.debug(myScoreID.rowLayoutID.childrenRect.width)
-            }
         }
 
-        Scoreboard {
-            id: myScoreID
-            anchors.fill: parent
+        Action {
+            text: qsTr("&Quit")
+            shortcut: "Ctrl+Q"
+            onTriggered: Qt.quit()
         }
+
     }
 
     property var testWindow: ApplicationWindow {
