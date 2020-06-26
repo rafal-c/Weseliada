@@ -27,6 +27,9 @@ int main(int argc, char* argv[]) {
     QuestionListModel questionListModel;
     root_context->setContextProperty("questionListModelCpp", &questionListModel);
 
+    root_context->setContextProperty("leftTeamScoreModelCpp", answerAreaModel.getTeamModel(Team::Left));
+    root_context->setContextProperty("rightTeamScoreModelCpp", answerAreaModel.getTeamModel(Team::Right));
+
     const QUrl mainUrl(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(
         &engine, &QQmlApplicationEngine::objectCreated, &app, [mainUrl](QObject* obj, const QUrl& objUrl) {

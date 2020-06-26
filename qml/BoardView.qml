@@ -6,6 +6,7 @@ TableView {
 
     property string font: "écran monochrome / monochrome display"
 
+    property int defaultSpacing: 10
     property real delegateWidth: ((width + columnSpacing) / columns) - columnSpacing
     property real delegateHeight: delegateWidth * 7 / 5
 
@@ -21,7 +22,16 @@ TableView {
         fontFamily: font
     }
 
-    onWidthChanged: {
-        forceLayout();
+//    onWidthChanged: {
+//        forceLayout();
+//    }
+
+    //TODO: find better way
+    Timer {
+        repeat: true
+        running: true
+        onTriggered: {
+            forceLayout()
+        }
     }
 }

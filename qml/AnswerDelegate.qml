@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtMultimedia 5.12
 
 Item {
     id: delegateID
@@ -14,6 +15,11 @@ Item {
     property int parentIndex
 
     enabled: active
+
+    SoundEffect {
+        id: correctAnswerSoundID
+        source: "qrc:/audio/correct"
+    }
 
     CheckDelegate {
         id: checkDelegate
@@ -62,7 +68,8 @@ Item {
             console.log("Checked answer to question " + parentIndex)
             if (checked) {
                 model.guessed = true;
-                answerAreaModelCpp.printAnswer(index, model.text, model.points)
+                answerAreaModelCpp.printAnswer(index, model.text, model.points);
+                correctAnswerSoundID.play();
             } else {
                 model.guessed = false;
                 answerAreaModelCpp.clearAnswer(index, model.points)

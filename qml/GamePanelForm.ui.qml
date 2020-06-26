@@ -28,6 +28,7 @@ Item {
             id: questionsListID
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.topMargin: 20
             implicitWidth: 70
             model: questionListModelCpp
             delegate: QuestionDelegate {}

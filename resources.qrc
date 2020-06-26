@@ -12,4 +12,13 @@
     <qresource prefix="/data">
         <file alias="questions.json">resources/data/questions.json</file>
     </qresource>
+    <qresource prefix="/audio">
+        <file>resources/audio/correct.mp3</file>
+        <file>resources/audio/fail.wav</file>
+        <file>resources/audio/intro_music.mp3</file>
+        <file>resources/audio/wrong.wav</file>
+        <file>resources/audio/failN.wav</file>
+        <file>resources/audio/wrongN.wav</file>
+        <file alias="correct">resources/audio/correct.wav</file>
+    </qresource>
 </RCC>

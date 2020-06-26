@@ -14,10 +14,10 @@ Item {
         anchors.fill: parent
     }
 
-    MouseArea {
-        id: mouseID
-        anchors.fill: parent
-    }
+//    MouseArea {
+//        id: mouseID
+//        anchors.fill: parent
+//    }
 
     Text {
         id: textID

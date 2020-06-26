@@ -9,19 +9,35 @@ ColumnLayout {
     property int questionIndex: model.index
     spacing: 8
     //anchors.fill: parent
-    Rectangle {
+    RowLayout {
         id: rectangle
         Layout.fillWidth: true
         implicitHeight: questionTextID.implicitHeight + 10
         Button {
+            text: "<-"
+            onClicked: {
+                answerAreaModelCpp.assignPoints(0)
+            }
+        }
+
+        Button {
             id: questionTextID
             text: qsTr(question)
-            anchors.fill: parent
+            Layout.fillWidth: true
             onClicked: {
                 console.log("Now solving " + model.index + ". " + model.question + " with " + model.answers.rowCount() + " answers.")
                 questionListModelCpp.activeQuestion = model.index;
                 console.log("Active question is " + questionListModelCpp.activeQuestion)
                 answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
+                leftSidebarModelCpp.clear();
+                rightSidebarModelCpp.clear();
+            }
+        }
+
+        Button {
+            text: "->"
+            onClicked: {
+                answerAreaModelCpp.assignPoints(1)
             }
         }
     }

@@ -7,6 +7,7 @@ void AnswerAreaModel::prepareForQuestion(int answerCount)
     for (int i = 0; i < answerCount; ++i) {
         printAnswerPlaceholder(i);
     }
+    m_pointsAssigned = false;
     m_sum = 0;
     printSum();
 }
@@ -23,8 +24,10 @@ void AnswerAreaModel::printAnswer(int answerNo, QString answerText, int answerPo
     answerText.resize(m_maxAnswerLength, ' ');
     QString text = " " + QString::number(answerNo + 1) + " " + answerText + " " + QString::number(answerPoints).rightJustified(2) + " ";
     display(text, topRowOffset() + answerNo, 0);
-    m_sum += answerPoints;
-    printSum();
+    if(!m_pointsAssigned) {
+        m_sum += answerPoints;
+        printSum();
+    }
 }
 
 void AnswerAreaModel::clearAnswer(int answerNo, int answerPoints)
@@ -32,6 +35,15 @@ void AnswerAreaModel::clearAnswer(int answerNo, int answerPoints)
     printAnswerPlaceholder(answerNo);
     m_sum -= answerPoints;
     printSum();
+}
+
+void AnswerAreaModel::assignPoints(int teamIndex)
+{
+    if (teamIndex < 0 || static_cast<std::size_t>(teamIndex) >= teams.size()) {
+        return;
+    }
+    teams[teamIndex]->addPoints(m_sum);
+    m_pointsAssigned = true;
 }
 
 void AnswerAreaModel::printAnswerPlaceholder(int answerNo)

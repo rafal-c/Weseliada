@@ -4,6 +4,7 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: elementID
+    property alias row: rowLayoutID
 //    width: rowLayoutID.childrenRect.width
 //    height: rowLayoutID.childrenRect.height
 
@@ -42,10 +43,15 @@ Item {
 
     RowLayout {
         id: rowLayoutID
-        anchors.fill: parent
+        anchors {
+            margins: 20
+            fill: parent
+        }
+        spacing: 20
         TeamScore {
             id: leftTeamID
             teamName: "Drużyna Panny Młodej"
+            scoreModel: leftTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -66,6 +72,7 @@ Item {
         TeamScore {
             id: rightTeamID
             teamName: "Drużyna Pana Młodego"
+            scoreModel: rightTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter

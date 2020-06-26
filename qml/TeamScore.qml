@@ -3,10 +3,18 @@ import QtQuick.Layouts 1.11
 
 Item {
     property alias teamName: teamNameID.text
+    property alias scoreModel: scoreViewID.model
+    property int score: 0
+
     Rectangle {
         id: rectangle
         color: "transparent"
         anchors.fill: parent
+    }
+
+    function digits(n) {
+        n = Math.min(Math.max(0, n), 999);
+        return Array.from(String(n), Number);
     }
 
     ColumnLayout {
@@ -16,28 +24,20 @@ Item {
         Text {
             id: teamNameID
             text: qsTr("Team Name")
+            Layout.fillWidth: true
+            Layout.fillHeight: false
             horizontalAlignment: Text.AlignHCenter
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.alignment: Qt.AlignCenter
             font.pixelSize: 12
         }
 
-        RowLayout {
-            id: row
-            spacing: 2
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            TextField {
-                id: textField
-            }
-
-            TextField {
-                id: textField1
-            }
-
-            TextField {
-                id: textField2
-            }
+        BoardView {
+            id: scoreViewID
+            Layout.alignment: Qt.AlignCenter
+            implicitWidth: parent.width
         }
+
     }
 
 }

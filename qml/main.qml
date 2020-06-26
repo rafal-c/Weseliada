@@ -7,11 +7,7 @@ QtObject {
     property var controlWindow: Window {
         id: scoreboardWindowID
         visible: false
-        minimumWidth: gameBoardID.implicitWidth
-        minimumHeight: gameBoardID.implicitHeight
-        //maximumHeight: minimumHeight
-        //maximumWidth: minimumWidth
-    //    flags: Qt.FramelessWindowHint
+        flags: Qt.WindowMaximizeButtonHint
         title: qsTr("Tablica wyników")
 
 
@@ -34,6 +30,9 @@ QtObject {
             onTriggered: Qt.quit()
         }
 
+//        onWidthChanged: {
+//            gameBoardID.row.Scoreboard.forceLayout()
+//        }
     }
 
     property var testWindow: ApplicationWindow {
@@ -44,26 +43,55 @@ QtObject {
 //        minimumWidth: gamePanelID.implicitWidth
 //        minimumHeight: gamePanelID.height
 
-        menuBar: MenuBar {
-            Menu {
-                title: qsTr("&App")
-                Action {
-                    text: qsTr("&Show scoreboard")
-                    checkable: true
-                    shortcut: "Ctrl+F"
-                    onToggled: {
-                        scoreboardWindowID.visible = checked
-                        text = qsTr(checked? "&Hide scoreboard" : "&Show scoreboard")
+        Action {
+            id: quitActionID
+            text: qsTr("&Quit")
+            shortcut: "Ctrl+Q"
+            onTriggered: Qt.quit()
+        }
+
+        header: ToolBar {
+                RowLayout {
+                    anchors.fill: parent
+                    ToolButton {
+                        text: qsTr("‹")
+                        onClicked: stack.pop()
+                    }
+                    Label {
+                        text: "Title"
+                        elide: Label.ElideRight
+                        horizontalAlignment: Qt.AlignHCenter
+                        verticalAlignment: Qt.AlignVCenter
+                        Layout.fillWidth: true
+                    }
+                    ToolButton {
+                        text: qsTr("X")
+                        onClicked: quitActionID.trigger()
                     }
                 }
-                MenuSeparator { }
-                Action {
-                    text: qsTr("&Quit")
-                    shortcut: "Ctrl+Q"
-                    onTriggered: Qt.quit()
-                }
             }
-        }
+
+//        menuBar: MenuBar {
+//            Menu {
+//                title: qsTr("&App")
+//                Action {
+//                    text: qsTr("&Show scoreboard")
+//                    checkable: true
+//                    shortcut: "Ctrl+F"
+//                    onToggled: {
+//                        scoreboardWindowID.visible = checked
+//                        if (checked) {
+//                            scoreboardWindowID.showMaximized()
+//                            gameBoardID.boardReady()
+//                        }
+//                        scoreboardWindowID.setWidth(400)
+//                        text = qsTr(checked? "&Hide scoreboard" : "&Show scoreboard")
+//                    }
+//                }
+//                MenuSeparator { }
+
+//            }
+//        }
 
         Component.onCompleted: {
             setX(Screen.width / 2 - width / 2);
@@ -72,7 +100,9 @@ QtObject {
 
         GamePanel {
             id: gamePanelID
-            anchors.fill: parent
+            anchors {
+                fill: parent
+            }
         }
 
     }

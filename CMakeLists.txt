@@ -34,7 +34,8 @@ set(CPP_HEADERS
 	${CPP_INCLUDE_DIR}/sidebarmodel.h
 	${CPP_INCLUDE_DIR}/answerareamodel.h
 	${CPP_INCLUDE_DIR}/questionlistmodel.h
-	${CPP_INCLUDE_DIR}/answerlistmodel.h)
+	${CPP_INCLUDE_DIR}/answerlistmodel.h
+	${CPP_INCLUDE_DIR}/teamscoremodel.h)
 
 set(CPP_SRC_DIR "src")
 set(CPP_SOURCES
@@ -43,7 +44,8 @@ set(CPP_SOURCES
 	${CPP_SRC_DIR}/sidebarmodel.cpp
 	${CPP_SRC_DIR}/answerareamodel.cpp
 	${CPP_SRC_DIR}/questionlistmodel.cpp
-	${CPP_SRC_DIR}/answerlistmodel.cpp)
+	${CPP_SRC_DIR}/answerlistmodel.cpp
+	${CPP_SRC_DIR}/teamscoremodel.cpp)
 
 if(ANDROID)
     add_library(Weseliada SHARED

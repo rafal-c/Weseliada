@@ -1,6 +1,7 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import QtMultimedia 5.12
 
 Item {
     property var sidebarModel;
@@ -8,6 +9,16 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: "darkgray"
+    }
+
+    SoundEffect {
+        id: wrongAnswerSoundID
+        source: "qrc:/audio/resources/audio/wrong.wav"
+    }
+
+    SoundEffect {
+        id: totalFailureSoundID
+        source: "qrc:/audio/resources/audio/fail.wav"
     }
 
     ColumnLayout {
@@ -32,7 +43,10 @@ Item {
                 onPressedChanged: {
                     smallXImageID.opacity = pressed? 0.5 : 1
                 }
-                onClicked: sidebarModel.displaySmallX();
+                onClicked: {
+                    wrongAnswerSoundID.play();
+                    sidebarModel.displaySmallX();
+                }
             }
         }
 
@@ -53,7 +67,10 @@ Item {
                 onPressedChanged: {
                     bigXImageID.opacity = pressed? 0.5 : 1
                 }
-                onClicked: sidebarModel.displayBigX();
+                onClicked: {
+                    totalFailureSoundID.play();
+                    sidebarModel.displayBigX();
+                }
             }
         }
 
