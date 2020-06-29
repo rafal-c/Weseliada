@@ -1,10 +1,16 @@
 #ifndef ANSWERAREAMODEL_H
 #define ANSWERAREAMODEL_H
 
+#include <memory>
+#include <vector>
+
 #include <QObject>
+#include <QTimer>
 
 #include "scoreboardmodel.h"
 #include "teamscoremodel.h"
+
+class QTimer;
 
 enum class Team {
     Left = 0,
@@ -21,7 +27,6 @@ public:
             teamModel->display("  0");
         }
         m_maxAnswerLength = columnCount() - (4 /* spaces */ + 1 /* digit */ + s_scorePlaceholder.length());
-
     };
 
     Q_INVOKABLE void prepareForQuestion(int answerCount);
@@ -39,6 +44,8 @@ public:
 private:
     void printAnswerPlaceholder(int answerNo);
 
+    void printAnswerText(int answerNo, QString text);
+
     inline int topRowOffset() const noexcept {
         return 1 + static_cast<int>(m_answerCount < 6);
     }
@@ -53,6 +60,7 @@ private:
     int m_maxAnswerLength;
     int m_answerCount = 6;
     int m_sum = 0;
+    std::vector<std::unique_ptr<QTimer>> m_timers;
 };
 
 #endif // ANSWERAREAMODEL_H
