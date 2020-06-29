@@ -5,27 +5,27 @@
 			"answers": [
 				{
 					"text": "Lublin",
-					"points": 37
+					"points": 35
 				},
 				{
 					"text": "Warszawa",
-					"points": 37
+					"points": 21
 				},
 				{
 					"text": "Zamość",
-					"points": 37
+					"points": 18
 				},
 				{
 					"text": "Gniezno",
-					"points": 37
+					"points": 14
 				},
 				{
 					"text": "Dortmund",
-					"points": 37
+					"points": 8
 				},
 				{
 					"text": "Londyn",
-					"points": 37
+					"points": 4
 				}
 			]
 		},
@@ -34,27 +34,27 @@
 			"answers": [
 				{
 					"text": "tańczą",
-					"points": 37
+					"points": 26
 				},
 				{
 					"text": "piją",
-					"points": 37
+					"points": 23
 				},
 				{
 					"text": "śpiewają",
-					"points": 37
+					"points": 16
 				},
 				{
 					"text": "jedzą",
-					"points": 37
+					"points": 14
 				},
 				{
 					"text": "rozmawiają",
-					"points": 37
+					"points": 11
 				},
 				{
-					"text": "świetnie się bawią",
-					"points": 37
+					"text": "dobrze się bawią",
+					"points": 6
 				}
 			]
 		},
@@ -63,19 +63,19 @@
 			"answers": [
 				{
 					"text": "wiśniówka",
-					"points": 37
+					"points": 39
 				},
 				{
 					"text": "czerwona porzeczka",
-					"points": 37
+					"points": 24
 				},
 				{
 					"text": "pigwówka",
-					"points": 37
+					"points": 22
 				},
 				{
 					"text": "malinówka",
-					"points": 37
+					"points": 7
 				}
 			]
 		},
@@ -84,48 +84,48 @@
 			"answers": [
 				{
 					"text": "nie istnieje",
-					"points": 37
+					"points": 34
 				},
 				{
 					"text": "nie pije",
-					"points": 37
+					"points": 20
 				},
 				{
 					"text": "nie pali",
-					"points": 37
+					"points": 15
 				},
 				{
 					"text": "nie sprzecza się",
-					"points": 37
+					"points": 14
 				},
 				{
 					"text": "nie zdradza",
-					"points": 37
+					"points": 9
 				}
 			]
 		},
 		{
-			"text": "Jak reaguje mąż na \"Kochanie, nie mam się w co ubrać!\"?",
+			"text": "Co odpowie mąż na słowa żony \"Kochanie, nie mam się w co ubrać!\"?",
 			"answers": [
 				{
-					"text": "To chodź goła, mi to nie przeszkadza.",
-					"points": 37
+					"text": "To chodź goła, mi to nie przeszkadza",
+					"points": 28
 				},
 				{
-					"text": "A szafa się nie domyka.",
-					"points": 37
+					"text": "A szafa się nie domyka",
+					"points": 26
 				},
 				{
-					"text": "Czyli jak zawsze.",
-					"points": 37
+					"text": "Czyli jak zawsze",
+					"points": 15
 				},
 				{
-					"text": "Zaraz ci coś znajdę.",
-					"points": 37
+					"text": "Zaraz ci coś znajdę",
+					"points": 13
 				},
 				{
-					"text": "Musimy jechać na zakupy.",
-					"points": 37
+					"text": "Musimy jechać na zakupy",
+					"points": 9
 				}
 			]
 		},
@@ -134,19 +134,27 @@
 			"answers": [
 				{
 					"text": "małżonka",
-					"points": 37
-				},
-				{
-					"text": "ukochana",
-					"points": 37
-				},
-				{
-					"text": "druga połówka",
-					"points": 37
+					"points": 32
 				},
 				{
 					"text": "stara",
-					"points": 37
+					"points": 25
+				},
+				{
+					"text": "druga połówka",
+					"points": 17
+				},
+				{
+					"text": "ukochana",
+					"points": 12
+				},
+				{
+					"text": "luba",
+					"points": 11
+				},
+				{
+					"text": "żabcia",
+					"points": 5
 				}
 			]
 		}
