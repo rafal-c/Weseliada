@@ -24,18 +24,20 @@ Item {
         Text {
             id: teamNameID
             text: qsTr("Team Name")
+            wrapMode: Text.NoWrap
+            font.pointSize: 100
+            font.capitalization: Font.MixedCase
             Layout.fillWidth: true
-            Layout.fillHeight: false
             horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignCenter
-            font.pixelSize: 12
+            fontSizeMode: Text.HorizontalFit
         }
 
 
         BoardView {
             id: scoreViewID
             Layout.alignment: Qt.AlignCenter
-            implicitWidth: parent.width
+            Layout.fillWidth: true
         }
 
     }

@@ -13,5 +13,7 @@
         <file>qml/TeamScore.qml</file>
         <file>qml/GameBoard.qml</file>
         <file>qml/BoardView.qml</file>
+        <file>qml/MainWindowToolBar.qml</file>
+        <file>qml/FinalStreamArea.qml</file>
     </qresource>
 </RCC>

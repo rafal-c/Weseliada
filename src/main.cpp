@@ -2,6 +2,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QScreen>
 
 #include "sidebarmodel.h"
 #include "answerareamodel.h"
@@ -12,6 +13,10 @@ int main(int argc, char* argv[]) {
     qmlRegisterType<ScoreboardModel>("ScoreboardModel", 1, 0, "ScoreboardModel");
     QGuiApplication app(argc, argv);
 
+    auto screens = app.screens();
+    for (auto* screen : screens) {
+        qDebug() << QString("Available screen %1 by %2 of size: ").arg(screen->serialNumber()).arg(screen->model()) << screen->size();
+    }
     QQmlApplicationEngine engine;
     QQmlContext *root_context = engine.rootContext();
 
@@ -41,7 +46,6 @@ int main(int argc, char* argv[]) {
 
     questionListModel.readQuestionsFromFile(QStringLiteral(":/data/questions.json"));
     qDebug() << "Loaded questions count: " << questionListModel.rowCount();
-
 
     QFontDatabase::addApplicationFont(":/fonts/ecran_monochrome.ttf");
     QFontDatabase::addApplicationFont(":/fonts/led_calculator.ttf");

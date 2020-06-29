@@ -14,7 +14,21 @@ ColumnLayout {
         Layout.fillWidth: true
         implicitHeight: questionTextID.implicitHeight + 10
         Button {
-            text: "<-"
+            id: pointsGoLeftButtonID
+            text: "⬅ 💰"
+            display: AbstractButton.TextOnly
+            contentItem: Rectangle {
+                color: "transparent"
+                Text {
+                    font.pointSize: 100
+                    anchors.fill: parent
+                    text: pointsGoLeftButtonID.text
+                    fontSizeMode: Text.Fit
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+
             onClicked: {
                 answerAreaModelCpp.assignPoints(0)
             }
@@ -35,7 +49,19 @@ ColumnLayout {
         }
 
         Button {
-            text: "->"
+            id: pointsGoRightButtonID
+            text: "💰 ➡"
+            contentItem: Rectangle {
+                color: "transparent"
+                Text {
+                    font.pointSize: 100
+                    anchors.fill: parent
+                    text: pointsGoRightButtonID.text
+                    fontSizeMode: Text.Fit
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
             onClicked: {
                 answerAreaModelCpp.assignPoints(1)
             }

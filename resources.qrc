@@ -1,4 +1,7 @@
 <RCC>
+    <qresource prefix="/">
+	    <file>qtquickcontrols2.conf</file>
+	</qresource>
     <qresource prefix="/fonts">
         <file alias="ecran_monochrome.ttf">resources/fonts/ecran_monochrome.ttf</file>
         <file alias="led_calculator.ttf">resources/fonts/led_calculator.ttf</file>
@@ -15,7 +18,7 @@
     <qresource prefix="/audio">
         <file>resources/audio/correct.mp3</file>
         <file>resources/audio/fail.wav</file>
-        <file>resources/audio/intro_music.mp3</file>
+        <file alias="intro">resources/audio/intro_music.mp3</file>
         <file>resources/audio/wrong.wav</file>
         <file>resources/audio/failN.wav</file>
         <file>resources/audio/wrongN.wav</file>

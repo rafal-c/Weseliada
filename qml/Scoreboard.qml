@@ -4,7 +4,7 @@ import ScoreboardModel 1.0
 
 Item {
     id: scoreboardID
-
+    property alias finalStream: finalStreamID
     property int defaultSpacing: 10
     enabled: false
 
@@ -46,5 +46,19 @@ Item {
             implicitWidth: Math.round(0.1 * parent.width)
         }
     }
+
+
+    FinalStreamArea {
+        id: finalStreamID
+        visible: false
+        anchors.fill: parent
+    }
+
 }
 
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

@@ -4,7 +4,8 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: elementID
-    property alias row: rowLayoutID
+    property alias finalStreamArea: myScoreID.finalStream
+
 //    width: rowLayoutID.childrenRect.width
 //    height: rowLayoutID.childrenRect.height
 
