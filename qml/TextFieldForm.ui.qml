@@ -2,11 +2,12 @@ import QtQuick 2.4
 
 Item {
     id: textFieldID
-    //implicitWidth: 50
-    implicitHeight: implicitWidth * 7 / 5
+
     property alias text: textID.text
     property alias textID: textID
     property alias fontFamily: textID.font.family
+
+    implicitHeight: implicitWidth * 7 / 5
 
     Rectangle {
         id: rectangle
@@ -14,15 +15,12 @@ Item {
         anchors.fill: parent
     }
 
-//    MouseArea {
-//        id: mouseID
-//        anchors.fill: parent
-//    }
-
+    //    MouseArea {
+    //        id: mouseID
+    //        anchors.fill: parent
+    //    }
     Text {
         id: textID
-        //        width: 50
-        //        height: 70
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         anchors.fill: parent

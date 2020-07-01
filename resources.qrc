@@ -1,27 +1,25 @@
 <RCC>
     <qresource prefix="/">
-	    <file>qtquickcontrols2.conf</file>
-	</qresource>
+        <file>qtquickcontrols2.conf</file>
+    </qresource>
     <qresource prefix="/fonts">
         <file alias="ecran_monochrome.ttf">resources/fonts/ecran_monochrome.ttf</file>
         <file alias="led_calculator.ttf">resources/fonts/led_calculator.ttf</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="bigX">resources/images/bigX.png</file>
-        <file alias="smallX">resources/images/smallX.png</file>
-        <file alias="error">resources/images/error-5-256.png</file>
-        <file alias="warning">resources/images/error-6-256.png</file>
+        <file alias="bride">resources/images/bride.svg</file>
+        <file alias="groom">resources/images/groom.svg</file>
+        <file alias="error">resources/images/bigX.svg</file>
+        <file alias="warning">resources/images/smallX.svg</file>
     </qresource>
     <qresource prefix="/data">
         <file alias="questions.json">resources/data/questions.json</file>
     </qresource>
     <qresource prefix="/audio">
-        <file>resources/audio/correct.mp3</file>
         <file>resources/audio/fail.wav</file>
-        <file alias="intro">resources/audio/intro_music.mp3</file>
         <file>resources/audio/wrong.wav</file>
-        <file>resources/audio/failN.wav</file>
-        <file>resources/audio/wrongN.wav</file>
         <file alias="correct">resources/audio/correct.wav</file>
+        <file alias="intro_lektor">resources/audio/intro_z_lektorem.wav</file>
+        <file alias="question_intro">resources/audio/question_intro.wav</file>
     </qresource>
 </RCC>

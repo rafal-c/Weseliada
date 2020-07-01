@@ -51,7 +51,8 @@ Item {
         spacing: 20
         TeamScore {
             id: leftTeamID
-            teamName: "Drużyna Panny Młodej"
+            //teamName: "Drużyna Panny Młodej"
+            teamPicture: "qrc:/images/bride"
             scoreModel: leftTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height
@@ -72,7 +73,8 @@ Item {
 
         TeamScore {
             id: rightTeamID
-            teamName: "Drużyna Pana Młodego"
+            //teamName: "Drużyna Pana Młodego"
+            teamPicture: "qrc:/images/groom"
             scoreModel: rightTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height

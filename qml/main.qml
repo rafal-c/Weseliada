@@ -6,12 +6,12 @@ import QtQuick.Layouts 1.12
 import QtMultimedia 5.12
 
 QtObject {
-    property var controlWindow: ApplicationWindow {
+    property var controlWindow: Window {
         id: scoreboardWindowID
         visible: false
         //flags: Qt.FramelessWindowHint
         title: qsTr("Tablica wyników")
-        screen: Qt.application.screens[1]//panelWindowID.toolbar.chosenScreen]
+        //screen: Qt.application.screens[1]//panelWindowID.toolbar.chosenScreen]
 
         property alias finalStreamView: gameBoardID.finalStreamArea
         GameBoard {
@@ -76,7 +76,7 @@ QtObject {
 
 
         Material.theme: Material.Dark
-        Material.accent: Material.Purple
+        Material.accent: Material.Indigo
 
         property alias toolbar: toolbarID
         visible: true

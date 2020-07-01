@@ -2,9 +2,12 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.11
 
 Item {
-    property alias teamName: teamNameID.text
+    //property alias teamName: teamNameID.text
+    property alias teamPicture: pictureID.source
     property alias scoreModel: scoreViewID.model
     property int score: 0
+
+    Layout.fillHeight: true
 
     Rectangle {
         id: rectangle
@@ -21,22 +24,38 @@ Item {
         id: columnLayout
         anchors.fill: parent
 
-        Text {
-            id: teamNameID
-            text: qsTr("Team Name")
-            wrapMode: Text.NoWrap
-            font.pointSize: 100
-            font.capitalization: Font.MixedCase
+
+//        Text {
+//            id: teamNameID
+//            text: qsTr("Team Name")
+//            fontSizeMode: Text.VerticalFit
+//            Layout.fillHeight: true
+//            verticalAlignment: Text.AlignBottom
+//            wrapMode: Text.WordWrap
+//            font.pointSize: 80
+//            font.capitalization: Font.MixedCase
+//            Layout.fillWidth: true
+//            horizontalAlignment: Text.AlignHCenter
+//            Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+        //        }
+        Rectangle {
+            color: "transparent"
+            implicitHeight: 0.2 * parent.height
             Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            Layout.alignment: Qt.AlignCenter
-            fontSizeMode: Text.HorizontalFit
         }
 
+        Image {
+            id: pictureID
+            Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
+            fillMode: Image.PreserveAspectFit
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
 
         BoardView {
             id: scoreViewID
-            Layout.alignment: Qt.AlignCenter
+            implicitHeight: 0.5 * parent.height
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             Layout.fillWidth: true
         }
 
@@ -46,7 +65,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:1;anchors_height:200;anchors_width:200;anchors_x:0;anchors_y:0}
-D{i:2;anchors_height:100;anchors_width:100}
+    D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/

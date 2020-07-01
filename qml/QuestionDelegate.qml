@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
+import QtMultimedia 5.12
 
 ColumnLayout {
     id: delegateID
@@ -34,17 +35,28 @@ ColumnLayout {
             }
         }
 
+        SoundEffect {
+            id: questionIntroSoundID
+            source: "qrc:/audio/question_intro"
+        }
+
         Button {
             id: questionTextID
             text: qsTr(question)
             Layout.fillWidth: true
             onClicked: {
-                console.log("Now solving " + model.index + ". " + model.question + " with " + model.answers.rowCount() + " answers.")
-                questionListModelCpp.activeQuestion = model.index;
-                console.log("Active question is " + questionListModelCpp.activeQuestion)
-                answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
+                console.log("Now solving " + questionIndex + ". " + model.question + " with " + model.answers.rowCount() + " answers.")
                 leftSidebarModelCpp.clear();
                 rightSidebarModelCpp.clear();
+                if (questionListModelCpp.activeQuestion == questionIndex) {
+                    questionListModelCpp.activeQuestion = -1
+                    answerAreaModelCpp.clear()
+                    return
+                }
+                questionIntroSoundID.play()
+                questionListModelCpp.activeQuestion = questionIndex
+                console.log("Active question is " + questionListModelCpp.activeQuestion)
+                answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
             }
         }
 

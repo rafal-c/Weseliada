@@ -47,14 +47,13 @@ public:
     }
 
     void setActiveQuestion(int newActive) {
-        if (!validQuestionIndex(newActive)) {
-            return;
-        }
         if (validQuestionIndex(m_activeQuestion)) {
             m_questions[m_activeQuestion].answersList->setActiveQ(false);
         }
-        m_activeQuestion = newActive;
-        m_questions[newActive].answersList->setActiveQ(true);
+         m_activeQuestion = newActive;
+        if (validQuestionIndex(newActive)) {
+             m_questions[newActive].answersList->setActiveQ(true);
+        }
     }
 
 signals:

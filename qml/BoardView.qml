@@ -17,9 +17,15 @@ TableView {
     model: model
     delegate: TextField {
         id: delegate
-        implicitWidth: mainAreaID.delegateWidth
+        implicitWidth: delegateWidth > 0? delegateWidth : 50
         text: model.text
         fontFamily: font
+    }
+
+    Rectangle {
+        color: "#040505"
+        width: parent.childrenRect.width
+        height: parent.childrenRect.height
     }
 
 //    onWidthChanged: {
@@ -35,3 +41,9 @@ TableView {
         }
     }
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

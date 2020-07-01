@@ -10,19 +10,22 @@ ToolBar {
         anchors.fill: parent
         Switch {
             id: showScoreboardSwitchID
-            text: qsTr("Show Scoreboard")
+            text: qsTr("Scoreboard visible")
             action: Action {
                 shortcut: "Ctrl+F"
                 onToggled: {
-                    console.log(screenInfo(scoreboardWindowID.screen))
-                    scoreboardWindowID.visible = checked
+                    console.log("Current: ", screenInfo(scoreboardWindowID.screen), " chosen: ", screenChoiceID.currentText)
+                    var scr = Qt.application.screens[chosenScreen]
+                    scoreboardWindowID.screen = scr
+                    scoreboardWindowID.setGeometry(scr.virtualX, scr.virtualY, scr.width, scr.height)
+                    console.log("Set to: ", scoreboardWindowID.screen.virtualX, scoreboardWindowID.screen.virtualY)
                     if (checked) {
-                        scoreboardWindowID.showMaximized()
+                        scoreboardWindowID.showFullScreen()
+                    } else {
+                        scoreboardWindowID.hide()
                     }
-                    showScoreboardSwitchID.text = qsTr(checked? "Hide scoreboard" : "Show scoreboard")
                 }
             }
-
         }
 
         Label {
@@ -49,7 +52,7 @@ ToolBar {
 
         Audio {
             id: introMusicID
-            source: "qrc:/audio/intro"
+            source: "qrc:/audio/intro_lektor"
         }
 
         ToolButton {
