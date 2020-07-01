@@ -63,19 +63,27 @@
 			"answers": [
 				{
 					"text": "wiśniówka",
-					"points": 39
+					"points": 26
 				},
 				{
 					"text": "czerwona porzeczka",
-					"points": 24
+					"points": 21
 				},
 				{
 					"text": "pigwówka",
-					"points": 22
+					"points": 20
 				},
 				{
 					"text": "malinówka",
-					"points": 7
+					"points": 14
+				},
+				{
+				    "text": "śliwowica",
+					"points": 12
+				},
+				{
+				    "text": "dereniówka",
+					"points": 9
 				}
 			]
 		},
