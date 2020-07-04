@@ -13,7 +13,7 @@ TableView {
     implicitHeight: Math.round((delegateHeight + rowSpacing) * rows)
 
     columnSpacing: model ? model.tileSpacing : defaultSpacing
-    rowSpacing: model ? model.tileSpacing : defaultSpacing
+    rowSpacing: 1.5 * (model ? model.tileSpacing : defaultSpacing)
     model: model
     delegate: TextField {
         id: delegate
@@ -27,10 +27,6 @@ TableView {
         width: parent.childrenRect.width
         height: parent.childrenRect.height
     }
-
-//    onWidthChanged: {
-//        forceLayout();
-//    }
 
     //TODO: find better way
     Timer {

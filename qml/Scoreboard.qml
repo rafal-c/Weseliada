@@ -18,8 +18,8 @@ Item {
         id: rowLayoutID
         spacing: mainAreaID.columnSpacing
         anchors {
-            rightMargin: 20
-            leftMargin: 20
+            rightMargin: 40
+            leftMargin: 40
             fill: parent
         }
         BoardView {
