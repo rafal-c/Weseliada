@@ -9,9 +9,7 @@ QtObject {
     property var controlWindow: Window {
         id: scoreboardWindowID
         visible: false
-        //flags: Qt.FramelessWindowHint
         title: qsTr("Tablica wyników")
-        //screen: Qt.application.screens[1]//panelWindowID.toolbar.chosenScreen]
 
         property alias finalStreamView: gameBoardID.finalStreamArea
         GameBoard {
@@ -94,15 +92,6 @@ QtObject {
         header: MainWindowToolBar{
             id: toolbarID
         }
-
-//        menuBar: MenuBar {
-//            Menu {
-//                title: qsTr("&App")
-
-//                MenuSeparator { }
-
-//            }
-//        }
 
         Component.onCompleted: {
             setX(Screen.width / 2 - width / 2);

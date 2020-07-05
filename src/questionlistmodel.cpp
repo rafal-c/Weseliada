@@ -10,7 +10,7 @@ QuestionListModel::QuestionListModel(QObject *parent)
 {
 }
 
-QVariant QuestionListModel::headerData(int section, Qt::Orientation orientation, int role) const
+QVariant QuestionListModel::headerData(int, Qt::Orientation, int) const
 {
     return "";
 }

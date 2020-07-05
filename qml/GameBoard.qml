@@ -6,10 +6,6 @@ Item {
     id: elementID
     property alias finalStreamArea: myScoreID.finalStream
 
-//    width: rowLayoutID.childrenRect.width
-//    height: rowLayoutID.childrenRect.height
-
-
     Rectangle {
         color: "#1c1f22"
         anchors.fill: parent
@@ -51,14 +47,12 @@ Item {
         spacing: 20
         TeamScore {
             id: leftTeamID
-            //teamName: "Drużyna Panny Młodej"
             teamPicture: "qrc:/images/bride"
             scoreModel: leftTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
-//            Layout.fillHeight: true
         }
 
         Scoreboard {
@@ -73,14 +67,12 @@ Item {
 
         TeamScore {
             id: rightTeamID
-            //teamName: "Drużyna Pana Młodego"
             teamPicture: "qrc:/images/groom"
             scoreModel: rightTeamScoreModelCpp
             implicitWidth: 0.1 * rowLayoutID.width
             implicitHeight: 0.2 * rowLayoutID.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
-            //Layout.fillHeight: true
         }
     }
 

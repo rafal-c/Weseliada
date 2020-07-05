@@ -9,7 +9,7 @@ ColumnLayout {
 
     property int questionIndex: model.index
     spacing: 8
-    //anchors.fill: parent
+
     RowLayout {
         id: rectangle
         Layout.fillWidth: true
