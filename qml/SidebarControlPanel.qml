@@ -28,10 +28,8 @@ Item {
         Image {
             id: smallXImageID
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            //Layout.fillWidth: true
             Layout.preferredHeight: parent.height * 0.2
             fillMode: Image.PreserveAspectFit
-            //anchors.centerIn: parent
             height: sourceSize.height/2.5
             Layout.margins: 10
             Layout.fillHeight: true
@@ -58,8 +56,6 @@ Item {
             Layout.preferredHeight: parent.height * 0.2
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             fillMode: Image.PreserveAspectFit
-            //anchors.centerIn: parent
-            //height: sourceSize.height/2.5
             source: "qrc:/images/error"
 
             MouseArea {
@@ -76,7 +72,7 @@ Item {
 
         Button {
             id: button1
-            text: qsTr("Wyczyść")
+            text: qsTr("Clear")
             Layout.margins: 10
             Layout.fillWidth: true
             Layout.fillHeight: true

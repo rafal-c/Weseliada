@@ -21,7 +21,7 @@ class AnswerAreaModel : public ScoreboardModel
 {
     Q_OBJECT
 public:
-    AnswerAreaModel(int rows, int columns, QObject* parent = nullptr) : ScoreboardModel(rows, columns, parent) {
+    AnswerAreaModel(int rows, int columns, QObject* parent = nullptr) : ScoreboardModel(rows, columns, parent), s_sumKeyword(tr("SUM")) {
         for (auto& teamModel : teams) {
             teamModel = std::make_unique<TeamScoreModel>(3);
             teamModel->display("  0");
@@ -51,8 +51,8 @@ private:
     }
 
     static inline const QChar s_ellipsis = u'…';
-    static inline const QString s_sumKeyword = "SUMA";
     static inline const QString s_scorePlaceholder = "━━";
+    const QString s_sumKeyword; // could be static but we want it translatable
 
     std::array<std::unique_ptr<TeamScoreModel>, 2> teams;
 

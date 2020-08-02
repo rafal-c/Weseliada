@@ -55,7 +55,6 @@ ColumnLayout {
                 }
                 questionIntroSoundID.play()
                 questionListModelCpp.activeQuestion = questionIndex
-                console.log("Active question is " + questionListModelCpp.activeQuestion)
                 answerAreaModelCpp.prepareForQuestion(model.answers.rowCount());
             }
         }

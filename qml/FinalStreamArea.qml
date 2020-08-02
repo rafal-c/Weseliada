@@ -10,14 +10,6 @@ Item {
         id: camera
         cameraState: Camera.UnloadedState
         captureMode: Camera.CaptureVideo
-
-//        onCameraStatusChanged: {
-//            console.log("Camera status is now: ", cameraStatus)
-//        }
-
-//        onCameraStateChanged: {
-//            console.log("Camera state is now: ", cameraState)
-//        }
     }
 
     VideoOutput {

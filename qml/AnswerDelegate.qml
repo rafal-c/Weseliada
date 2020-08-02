@@ -65,7 +65,6 @@ Item {
         }
 
         onCheckedChanged: {
-            console.log("Checked answer to question " + parentIndex)
             if (checked) {
                 model.guessed = true;
                 answerAreaModelCpp.printAnswer(index, model.text, model.points);

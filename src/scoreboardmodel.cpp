@@ -5,7 +5,6 @@
 ScoreboardModel::ScoreboardModel(int rows, int columns, QObject *parent)
     : QAbstractTableModel(parent), m_rows(rows), m_columns(columns), m_board(rows * columns)
 {
-    qDebug() << QString("ScoreboardModel created with %1 rows and %2 columns").arg(m_rows).arg(m_columns) << Qt::endl;
 }
 
 int ScoreboardModel::rowCount(const QModelIndex &parent) const
@@ -40,7 +39,6 @@ void ScoreboardModel::display(QString newText, int startRow, int startCol)
 
 void ScoreboardModel::display(QString newText)
 {
-    qDebug() << "Displaying " << newText << Qt::endl;
     display(newText, 0, 0);
 }
 

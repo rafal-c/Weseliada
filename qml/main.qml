@@ -9,7 +9,7 @@ QtObject {
     property var controlWindow: Window {
         id: scoreboardWindowID
         visible: false
-        title: qsTr("Tablica wyników")
+        title: qsTr("Score Board")
 
         property alias finalStreamView: gameBoardID.finalStreamArea
         GameBoard {
@@ -31,7 +31,7 @@ QtObject {
         } else if(screen.name) {
             text += screen.manufacturer
         } else {
-            text += "Unknown"
+            text += qsTr("Unknown")
         }
         if (screen.serialNumber) {
             text += " (" + screen.serialNumber + ")"
@@ -53,7 +53,7 @@ QtObject {
         if(camera.displayName) {
             text += camera.displayName
         } else {
-            text += "Unknown"
+            text += qsTr("Unknown")
         }
         if (camera.deviceId) {
             text += " (" + camera.deviceId + ")"

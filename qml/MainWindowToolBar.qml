@@ -14,11 +14,9 @@ ToolBar {
             action: Action {
                 shortcut: "Ctrl+F"
                 onToggled: {
-                    console.log("Current: ", screenInfo(scoreboardWindowID.screen), " chosen: ", screenChoiceID.currentText)
                     var scr = Qt.application.screens[chosenScreen]
                     scoreboardWindowID.screen = scr
                     scoreboardWindowID.setGeometry(scr.virtualX, scr.virtualY, scr.width, scr.height)
-                    console.log("Set to: ", scoreboardWindowID.screen.virtualX, scoreboardWindowID.screen.virtualY)
                     if (checked) {
                         scoreboardWindowID.showFullScreen()
                     } else {
@@ -29,7 +27,7 @@ ToolBar {
         }
 
         Label {
-            text: "on"
+            text: qsTr("on")
             elide: Label.ElideRight
             horizontalAlignment: Qt.AlignHCenter
             verticalAlignment: Qt.AlignVCenter
@@ -38,7 +36,7 @@ ToolBar {
         ComboBox {
             id: screenChoiceID
             Layout.fillWidth: true
-            displayText: "Screen: " + currentText
+            displayText: qsTr("Screen: ") + currentText
             model: screensInfo()
         }
 
@@ -47,7 +45,7 @@ ToolBar {
         }
 
         Label {
-            text: qsTr("Intro + Lektor")
+            text: qsTr("Intro")
         }
 
         Audio {
@@ -88,7 +86,7 @@ ToolBar {
         ComboBox {
             id: cameraChoiceID
             Layout.fillWidth: true
-            displayText: "Camera: " + currentText
+            displayText: qsTr("Camera: ") + currentText
             model: camerasInfo()
         }
 
@@ -96,7 +94,7 @@ ToolBar {
         }
 
         ToolButton {
-            text: qsTr("X")
+            text: "X"
             onClicked: quitActionID.trigger()
         }
 

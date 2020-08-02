@@ -4,6 +4,7 @@
 #include <memory>
 
 #include <QAbstractListModel>
+
 #include "answerlistmodel.h"
 
 struct Question {
@@ -61,7 +62,7 @@ signals:
 
 private:
     bool validQuestionIndex(int i) const noexcept {
-        return i >= 0 && i < m_questions.size();
+        return i >= 0 && i < static_cast<int>(m_questions.size());
     }
 
     std::vector<Question> m_questions;

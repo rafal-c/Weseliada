@@ -3,6 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QScreen>
+#include <QTranslator>
 
 #include "sidebarmodel.h"
 #include "answerareamodel.h"
@@ -12,6 +13,14 @@ int main(int argc, char* argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     qmlRegisterType<ScoreboardModel>("ScoreboardModel", 1, 0, "ScoreboardModel");
     QGuiApplication app(argc, argv);
+
+    // Currently only Polish translation is available.
+    // Uncomment the lines below to translate the app to Polish
+
+//    QTranslator translator;
+//    const QString polishTranslation = "Weseliada_pl_PL";
+//    translator.load(polishTranslation);
+//    app.installTranslator(&translator);
 
     auto screens = app.screens();
     for (auto* screen : screens) {
