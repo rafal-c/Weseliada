@@ -76,3 +76,5 @@ build-*
 cmake-build-*
 .cmake
 CMakeLists.txt.user
+**/intro_z_lektorem.wav
+**/lektor.wav
