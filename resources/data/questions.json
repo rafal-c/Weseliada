@@ -1,168 +1,168 @@
 {
 	"questions": [
 		{
-			"text": "Skąd przyjechali goście weselni?",
+			"text": "Name Something Men Probably Lie About Most",
 			"answers": [
 				{
-					"text": "Lublin",
-					"points": 35
+					"text": "Age",
+					"points": 42
 				},
 				{
-					"text": "Warszawa",
-					"points": 21
+					"text": "Being Single",
+					"points": 20
 				},
 				{
-					"text": "Zamość",
+					"text": "Income",
+					"points": 19
+				},
+				{
+					"text": "Success With Women",
+					"points": 6
+				},
+				{
+					"text": "Job Title",
+					"points": 5
+				},
+				{
+					"text": "Weight",
+					"points": 5
+				}
+			]
+		},
+		{
+			"text": "Name A Complaint A Customer Might Have About A Bar They’re At",
+			"answers": [
+				{
+					"text": "Too Much Smoke",
+					"points": 19
+				},
+				{
+					"text": "Noise",
 					"points": 18
 				},
 				{
-					"text": "Gniezno",
-					"points": 14
+					"text": "Bad Service",
+					"points": 13
 				},
 				{
-					"text": "Dortmund",
-					"points": 8
+					"text": "Watery Drinks",
+					"points": 6
 				},
 				{
-					"text": "Londyn",
+					"text": "Expensive Drinks",
+					"points": 5
+				},
+				{
+					"text": "Too Rowdy",
 					"points": 4
 				}
 			]
 		},
 		{
-			"text": "Co robią goście na weselu?",
+			"text": "Name Something You Do After returning Home From A Long Vacation",
 			"answers": [
 				{
-					"text": "tańczą",
-					"points": 26
-				},
-				{
-					"text": "piją",
-					"points": 23
-				},
-				{
-					"text": "śpiewają",
-					"points": 16
-				},
-				{
-					"text": "jedzą",
-					"points": 14
-				},
-				{
-					"text": "rozmawiają",
-					"points": 11
-				},
-				{
-					"text": "dobrze się bawią",
-					"points": 6
-				}
-			]
-		},
-		{
-			"text": "Smak nalewki, który przygotowali państwo młodzi.",
-			"answers": [
-				{
-					"text": "wiśniówka",
-					"points": 26
-				},
-				{
-					"text": "czerwona porzeczka",
-					"points": 21
-				},
-				{
-					"text": "pigwówka",
-					"points": 20
-				},
-				{
-					"text": "malinówka",
-					"points": 14
-				},
-				{
-				    "text": "śliwowica",
-					"points": 12
-				},
-				{
-				    "text": "dereniówka",
-					"points": 9
-				}
-			]
-		},
-		{
-			"text": "Czego nie robi idealny mężczyzna?",
-			"answers": [
-				{
-					"text": "nie istnieje",
-					"points": 34
-				},
-				{
-					"text": "nie pije",
-					"points": 20
-				},
-				{
-					"text": "nie pali",
-					"points": 15
-				},
-				{
-					"text": "nie sprzecza się",
-					"points": 14
-				},
-				{
-					"text": "nie zdradza",
-					"points": 9
-				}
-			]
-		},
-		{
-			"text": "Co odpowie mąż na słowa żony \"Kochanie, nie mam się w co ubrać!\"?",
-			"answers": [
-				{
-					"text": "To chodź goła, mi to nie przeszkadza",
-					"points": 28
-				},
-				{
-					"text": "A szafa się nie domyka",
-					"points": 26
-				},
-				{
-					"text": "Czyli jak zawsze",
-					"points": 15
-				},
-				{
-					"text": "Zaraz ci coś znajdę",
-					"points": 13
-				},
-				{
-					"text": "Musimy jechać na zakupy",
-					"points": 9
-				}
-			]
-		},
-		{
-			"text": "Synonim słowa \"żona\"",
-			"answers": [
-				{
-					"text": "małżonka",
+					"text": "Sleep",
 					"points": 32
 				},
 				{
-					"text": "stara",
-					"points": 25
+					"text": "Unpack",
+					"points": 21
 				},
 				{
-					"text": "druga połówka",
+					"text": "Eating Sweets",
+					"points": 18
+				},
+				{
+					"text": "Laundry",
+					"points": 10
+				},
+				{
+				    "text": "Shower",
+					"points": 6
+				},
+				{
+				    "text": "Check Mail",
+					"points": 5
+				}
+			]
+		},
+		{
+			"text": "Name A Fruit That You Can Buy Dried",
+			"answers": [
+				{
+					"text": "Grape",
+					"points": 22
+				},
+				{
+					"text": "Banana",
+					"points": 21
+				},
+				{
+					"text": "Apricot",
+					"points": 21
+				},
+				{
+					"text": "Prune",
 					"points": 17
 				},
 				{
-					"text": "ukochana",
+					"text": "Apple",
+					"points": 15
+				}
+			]
+		},
+		{
+			"text": "Name Something For Which You Get A Warranty",
+			"answers": [
+				{
+					"text": "Car",
+					"points": 54
+				},
+				{
+					"text": "TV",
+					"points": 23
+				},
+				{
+					"text": "Watch",
+					"points": 8
+				},
+				{
+					"text": "Computer",
+					"points": 4
+				},
+				{
+					"text": "Appliance",
+					"points": 3
+				}
+			]
+		},
+		{
+			"text": "Name Something That often Has Magical Powers In fairy Tales",
+			"answers": [
+				{
+					"text": "Wand",
+					"points": 34
+				},
+				{
+					"text": "Witch",
+					"points": 24
+				},
+				{
+					"text": "Fairy Godmother",
+					"points": 18
+				},
+				{
+					"text": "Wizard",
 					"points": 12
 				},
 				{
-					"text": "luba",
-					"points": 11
+					"text": "Fairy Dust",
+					"points": 4
 				},
 				{
-					"text": "żabcia",
-					"points": 5
+					"text": "Broom",
+					"points": 4
 				}
 			]
 		}

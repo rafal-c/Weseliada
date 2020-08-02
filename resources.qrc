@@ -21,5 +21,6 @@
         <file alias="correct">resources/audio/correct.wav</file>
         <file alias="intro_lektor">resources/audio/intro_z_lektorem.wav</file>
         <file alias="question_intro">resources/audio/question_intro.wav</file>
+        <file alias="intro">resources/audio/intro.wav</file>
     </qresource>
 </RCC>

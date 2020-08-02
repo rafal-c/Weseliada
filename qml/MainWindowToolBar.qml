@@ -50,7 +50,8 @@ ToolBar {
 
         Audio {
             id: introMusicID
-            source: "qrc:/audio/intro_lektor"
+            source: "qrc:/audio/intro"
+            //source: "qrc:/audio/intro_lektor"
         }
 
         ToolButton {
